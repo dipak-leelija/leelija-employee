@@ -1,25 +1,22 @@
-import logo from './logo.svg';
+// import logo from './logo.svg';
 import './App.css';
-
-function App() {
+// import React from "react";
+import Navbar from "./components/Navbar.js";
+import Sidebar from './components/sidebar';
+import Dashboard from './components/Dashboard';
+import Uisettings from './components/Uisettings';
+// import '../node_modules/bootstrap/dist/css/bootstrap.min.css'
+const App = () => {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div class="g-sidenav-show  bg-gray-100">
+      <Sidebar />
+      <main className="main-content position-relative max-height-vh-100 h-100 border-radius-lg ">
+      <Navbar />
+      <Dashboard />
+      </main>
+      <Uisettings />
     </div>
   );
-}
+};
 
 export default App;
